@@ -1,0 +1,106 @@
+:root {
+  --colorLogo: white;
+  --colorLine: white;
+  --colorAll: white;
+  --time: 4000ms;
+}
+* {
+  word-wrap: break-word;
+}
+body {
+  overflow: hidden;
+  margin: 0;
+  background: black;
+}
+label {
+  white-space: nowrap
+}
+#veras {
+  filter: url(#kill);
+  margin: 0;
+  text-transform: uppercase;
+  pointer-events: none;
+  
+/*   font-family: "vf", sans-serif;
+  font-variation-settings: 'wdth' 75, 'wght' 900; */
+  font-family: "Bebas Neue", sans-serif; 
+  font-size: 100px;
+  color: white;
+  z-index: 1;
+  position: absolute;
+  width:100vw;
+  height:100vh; 
+  line-height:100vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  text-align: center;
+  white-space: nowrap;
+  mix-blend-mode: exclusion;
+  /*text-shadow: -420px -500px 0 white, 420px -500px 0 white, 
+    -820px -400px 0 white, 0px -400px 0 white, 820px -400px 0 white, 
+              -420px -300px 0 white, 420px -300px 0 white, 
+    -820px -200px 0 white, 0px -200px 0 white, 820px -200px 0 white, 
+              -420px -100px 0 white, 420px -100px 0 white, 
+    -820px 0px 0 white,                             820px 0px 0 white,
+              -420px 100px 0 white, 420px 100px 0 white,
+    -820px 200px 0 white, 0px 200px 0 white, 820px 200px 0 white,
+              -420px 300px 0 white, 420px 300px 0 white,
+    -820px 400px 0 white, 0px 400px 0 white, 820px 400px 0 white,
+              -420px 500px 0 white, 420px 500px 0 white;*/
+}
+#flipX {
+  display: inline-block;
+  transform: scaleX(-1);
+}
+#bpm {
+  background: #0000;
+  color: white;
+  width: 50px;
+}
+#canvas {
+  z-index: 0;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  transform: scaleY(-1);
+  filter: url(#kill) url(#noiseFilter);
+  background: black;
+  position: absolute;
+  top: 0;
+}
+#controls {
+  position: absolute;
+  bottom: 0;
+}
+#controls,
+#controls button,
+#controls select {
+  padding: 0.5em;
+  background: #181a1bdd;
+  color: white;
+  filter: grayscale(90%);
+}
+svg {
+  display: none;
+}
+
+.anim #vera, .anim #fisher, .anim #era, .anim #clubber {
+  animation-name: anim;
+  animation-duration: var(--time);
+  animation-iteration-count: infinite;
+}
+#fisher {
+  animation-delay: calc(-2*var(--time)/4);
+}
+#era {
+  animation-delay: calc(-3*var(--time)/4);
+}
+#clubber {
+  animation-delay: calc(-1*var(--time)/4);
+}
+@keyframes anim {
+  0%, 100% {opacity: 1;}
+  20% {opacity: 0;}
+  80% {opacity: 0;}
+}
