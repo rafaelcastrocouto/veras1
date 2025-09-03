@@ -7,8 +7,8 @@ window.invertMode = false;
 window.invertBack = false;
 window.anim = false;
 
-import {default as midi, askMidiPermissions, pressed} from '/midi';
-import {default as audioInit, audioLoop, popInit} from '/audio';
+import {default as midi, askMidiPermissions, pressed} from '/veras1/midi';
+import {default as audioInit, audioLoop, popInit} from '/veras1/audio';
 
 let iCtrl1,iCtrl2,iCtrl3,iCtrl4,iCtrl5,iCtrl6,iCtrl7,iCtrl8;
 
