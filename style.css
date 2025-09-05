@@ -91,10 +91,10 @@ svg {
   animation-iteration-count: infinite;
 }
 #fisher {
-  animation-delay: calc(-2*var(--time)/4);
+  animation-delay: calc(-3*var(--time)/4);
 }
 #era {
-  animation-delay: calc(-3*var(--time)/4);
+  animation-delay: calc(-2*var(--time)/4);
 }
 #clubber {
   animation-delay: calc(-1*var(--time)/4);
