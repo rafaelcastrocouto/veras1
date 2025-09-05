@@ -65,8 +65,8 @@ function animate () {
     let n = 256
     let d = audioData.slice(0,n).reduce((s, a) => s + a, 0)/n;
     
-    if (!strobo && !pressed && (d > 64)) window.invertBack = !window.invertBack;
-    if (!strobo && !pressed && (d < 64)) window.invertBack = window.invertMode;
+    if (!strobo && !pressed && (d > 64 + (iCtrl6 * 20))) window.invertBack = !window.invertBack;
+    if (!strobo && !pressed && (d < 64 + (iCtrl6 * 20))) window.invertBack = window.invertMode;
     
     for (let x=0; x<canvas.width; x++) {
       const xi = Math.floor(x*sx - (hw*sx) + hw);
