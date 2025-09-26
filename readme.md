@@ -1,4 +1,4 @@
-# [VERA FISHER ERA CLUBBER][1]
+# [VERA FISCHER ERA CLUBBER][1]
 
 ## Audio to Video Performance
 
